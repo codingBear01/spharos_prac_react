@@ -7,16 +7,12 @@ function Parent() {
   const [user, setUser] = useState('');
 
   const handleClick = (act) => {
-    if (act === 'm') {
-      setCard(card - 10000);
-    } else {
-      setCard(card + 10000);
-    }
+    act === 'm' ? setCard(card - 10000) : setCard(card + 10000);
   };
 
   return (
     <div>
-      <div>{card}</div>
+      <div>잔액: {card}원</div>
       <div>
         <button onClick={() => handleClick('m')}>-</button>
         <button onClick={() => handleClick('p')}>+</button>
